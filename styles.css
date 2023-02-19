@@ -1,0 +1,279 @@
+@import "meyer-reset.css";
+
+/* SETUP */
+* {
+    box-sizing: border-box;
+}
+
+picture {
+    display: block;
+}
+
+img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+a {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+}
+
+p a, li a {
+    display: inline-block;
+    color: blue;
+    text-decoration: underline;
+}
+
+/* SETTINGS */
+
+html {
+    --black: #333;
+    --white: #efefef;
+    --color: rgb(60, 130, 246);
+    --dark: rgb(31, 41, 55);
+    --light: cyan;
+}
+
+/* DEV STYLES */
+
+
+.header-section {
+    font-family: sans-serif;
+    background-color: var(--dark);
+    color: white;
+}
+
+.header-section__wrapper {
+    display: flex;
+    align-items: center;
+    
+}
+
+.company-name {
+    font-size: 24px;
+    font-weight: bold;
+    padding-top: 1rem;
+}
+
+.nav {
+    margin-left: auto;
+}
+
+.header-section__links {
+    display: flex;
+}
+
+.about {
+    padding: 10px;
+}
+
+.coffee {
+    padding: 10px;
+}
+
+.contact {
+    padding: 10px;
+}
+
+
+/* STRUCTURE */
+body {
+    display: flex;
+    flex-direction: column;
+    /* border: 10px solid blue; */
+    min-height: 100vh;
+}
+
+main {
+    flex-grow: 1;
+    /* border: 10px solid pink; */
+}
+
+inner-column {
+    display: block;
+    /* border: 8px solid orange; */
+    padding: 10px;
+    width: 98%;
+    max-width: 1100px;
+    margin-right: auto;
+    margin-left: auto;
+
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+}
+
+header inner-column {
+    padding: 10px;
+}
+
+/* TYPOGRAPHY */
+
+.loud-voice {
+    font-family: sans-serif;
+    font-size: 48px;
+    font-weight: bolder;
+    line-height: .9;
+}
+
+@media (min-width: 700px) {
+    .loud-voice {
+        font-size: 40px;
+    }
+}
+
+.products-title {
+    font-family: sans-serif;
+    font-size: 36px;
+    font-weight: bolder;
+    color: #1F2937;
+    line-height: .9;
+    text-align: center;
+    padding-top: 48px;
+    padding-bottom: 38px;
+}
+
+@media (min-width: 700px) {
+    .products-title {
+        font-size: 36px;
+    }
+}
+
+
+
+.calm-voice {
+    font-family: sans-serif;
+    font-size: 1rem;
+    line-height: 1.3;
+}
+
+/* COMPONENTS */
+
+.header-logo {
+    display: flex;
+    width: 75px;
+    height: auto;
+}
+
+
+.button {
+    font-family: sans-serif;
+    display: inline-block;
+    background-color: var(--color);
+    color: white;
+    font-size: 1.2rem;
+    padding: 0.7em 1em;
+    border-radius: 6px;
+}
+
+product-card {
+    display: block;
+}
+
+/* MODULES */
+
+graphic-diptych {
+    display: block;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    /* padding-top: 30px;
+    padding-bottom: 30px; */
+}
+
+
+graphic-diptych text-content p {
+    margin-top: 10px;
+}
+
+graphic-diptych text-content .button {
+    margin-top: 10px;
+}
+
+
+
+@media (min-width: 700px) {
+    graphic-diptych {
+        display: flex;
+        flex-direction: row-reverse;
+        gap: 20px
+    }
+    graphic-diptych :is(text-content, picture) {
+        flex-basis: 50%;
+        /* border: 1px solid blue; */
+    }
+}
+
+products-grid {
+    display: block;
+  
+    /* border: 8px solid orange; */
+    padding: 10px;
+    width: 98%;
+    max-width: 1100px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+
+products-grid .product-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    grid-gap: 3em;
+}
+
+
+.welcome {
+    background-color: var(--dark);
+    color: var(--white);
+}
+
+.welcome .button {
+    color: var(--white);
+}
+
+.latte {
+   width: 280px;
+   height: auto;
+   border-radius: 5%;
+   overflow: hidden;
+   border: solid 5px #3882F6;
+}
+
+.coffee-man {
+    width: 280px;
+    height: 190px;
+    border-radius: 5%;
+    overflow: hidden;
+    border: solid 5px #3882F6;
+}
+
+.kilrea {
+    width: 280px;
+    height: 190px;
+    border-radius: 5%;
+    overflow: hidden;
+    border: solid 5px #3882F6;
+}
+
+.barista {
+    width: 280px;
+    height: 190px;
+    border-radius: 5%;
+    overflow: hidden;
+    border: solid 5px #3882F6;
+}
+
+.subtext {
+    display: inline-block;
+    font-family: sans-serif;
+   
+    color: #1F2937;
+    font-weight: bold;
+    padding-top: 10px;
+    margin-left:1px;
+    margin-right: 0px;
+
+}
